@@ -1,0 +1,13 @@
+{
+  "name": "request-parser",
+  "version": "0.0.1",
+  "description": "an app to return request detail",
+  "main": "index.js",
+  "repository": "https://github.com/fyfirman/request-parser.git",
+  "author": "Firmansyah Yanuar <fyfirman@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

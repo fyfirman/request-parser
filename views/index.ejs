@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,nofollow">
+  <meta name="description" content="An app to return request detail" />
+  <meta name="google" content="notranslate" />
+  <title>Request Parser</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 12px;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: scroll;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 4px;
+      min-width: 10vw;
+    }
+
+    tr:nth-child(even)>td {
+      background-color: #dddddd;
+      border: 1px solid #eeeeee;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    Request Parser
+  </h1>
+  <span>Request : <%= req.method %> <%= url %></span>
+  <div>
+    <h2>Query</h2>
+    <table>
+      <% Object.keys(req.query).forEach(function(key,index){ %>
+        <tr class="row">
+          <td class="key">
+            <%= key %>
+          </td>
+          <td class="value">
+            <%= req.query[key] %>
+          </td>
+        </tr>
+        <% }) %>
+    </table>
+  </div>
+  <div>
+    <h2>Headers</h2>
+    <table>
+      <% Object.keys(req.headers).forEach(function(key,index){ %>
+        <tr class="row">
+          <td class="key">
+            <%= key %>
+          </td>
+          <td class="value">
+            <%= req.headers[key] %>
+          </td>
+        </tr>
+        <% }) %>
+    </table>
+  </div>
+</body>
+
+</html>
