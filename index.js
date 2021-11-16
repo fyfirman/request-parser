@@ -13,7 +13,9 @@ app.get('/', (req,res) => {
   })
 });
 
-const PORT = process.env.PORT || 4000;
+app.get('/test', (req, res) => res.send('Test Page Route'));
+
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`App listening on PORT ${port}`)
 });
