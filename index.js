@@ -1,6 +1,8 @@
 const express = require('express');
+const cookieParser = require("cookie-parser");
+
 const app = express();
-const port = 4000;
+app.use(cookieParser());
 
 app.use(express.json());
 app.set('view engine', 'ejs');
@@ -17,5 +19,5 @@ app.get('/test', (req, res) => res.send('Test Page Route'));
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
-  console.log(`App listening on PORT ${port}`)
+  console.log(`App listening on PORT ${PORT}`)
 });
