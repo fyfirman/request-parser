@@ -80,7 +80,7 @@
       </table>
     </div>
     <div class="w-full mt-4 pb-8">
-      <h2 class="font-bold text-xl">Cookies</h2>
+      <h2 class="font-bold text-xl">Cookies (Request)</h2>
       <table>
         <% Object.keys(req.cookies).forEach(function(key,index){ %>
         <tr class="row">
@@ -91,6 +91,10 @@
         </tr>
         <% }) %>
       </table>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl">Cookie (Client)</h2>
+      <code id="document-cookie"> </code>
     </div>
   </body>
 </html>
